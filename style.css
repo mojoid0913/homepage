@@ -1,0 +1,245 @@
+/* Animation */
+@keyframes rolling {
+    0% {
+        transform: translateY(0);
+    }
+    33% {
+        transform: translateY(-25%);
+    }
+    66% {
+        transform: translateY(-50%);
+    }
+    100%{
+        transform: translateY(-75%);
+    }
+}
+
+
+/* CSS Reset */
+
+body, h1, h3, p, ul, a {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1, h3 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Style */
+
+body {
+    background-color: #101820;
+    color: #888;
+}
+
+nav {
+    height: 40px;
+    width: 100%;
+    background: #444;
+    font-size: 25px;
+    font-family: 'Caveat', cursive;
+    position: relative;
+    border-bottom: 2px solid #555;
+}
+
+.nav-container {
+    padding: 0;
+    margin: 0 auto;
+    width: 600px;
+    height: 40px;
+}
+
+.nav-item {
+    display: inline;
+    float: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+nav a {
+    color: #F0EDDF;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    line-height: 40px;
+    text-shadow: 0.5px 0.5px 0px #F0EDDD;
+}
+
+.nav-item a {
+    box-sizing: border-box;
+}
+.nav-item:last-child a {
+    border-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    nav { 
+      height: auto;
+    }
+    .nav-container {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    .nav-item {
+      width: 50%;
+      float: left;
+      position: relative;
+    }
+    .nav-item a {
+    border-bottom: 1px solid #576979;
+    }
+    nav a {
+      text-align: left;
+      width: 100%;
+      text-indent: 25px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    nav {
+        border-bottom: 0;
+    }
+    nav ul {
+        display: none;
+        height: auto;
+    }
+    nav a#pull {
+        display: block;
+        background-color: #283744;
+        width: 100%;
+        position: relative;
+    }
+    nav a#pull:after {
+        content:"";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+}
+
+
+
+#profile {
+    padding: 7%;
+}
+
+.profile-header,
+.profile-section {
+    padding-bottom: 7%;
+}
+
+.name {
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 1.9em;
+}
+
+.name-job {
+    display: inline-block;
+    color: #F0EDCC;
+    vertical-align: top;
+    height: 2em;
+    overflow: hidden;
+    padding-right: 0.5em;
+    padding-left:0.2em;
+    position: relative;
+}
+
+.name-job::after {
+    content: ' ';
+    margin-left: -1em;
+    margin-right: -1em;
+    box-shadow: inset 0 0 10px 13px #101820;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.name-job-list {
+    animation-name: rolling;
+    animation-duration: 5.5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.name-title {
+    font-size: 1.8em;
+    font-family: 'Fredericka the Great', cursive;
+    line-height: 0.7;
+    color: #F2AA4C;
+    margin-left: -0.2em;
+    position: relative;
+}
+
+.introduce {
+    color: #F0EDDF;
+}
+
+
+
+#footer {
+    padding: 6%;
+    padding-bottom: 1%;
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+#footer>h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #F2AA4C;
+}
+
+#icons a {
+    background-image: url(images/social_media_icons.png);
+    background-size: 550%;
+    filter: grayscale(100%);
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    margin: 3%;
+}
+
+#icons a.instagram { background-position: 7% 37%; }
+#icons a.facebook { background-position: 7% 11%; }
+#icons a.youtube { background-position: 36% 63%; }
+#icons a.phone { background-position: 64% 63%; }
+
+#icons a:hover { filter: grayscale(0); transform: scale(1.5); transition: .3s; }
+
+
+
+
+
